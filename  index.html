@@ -1,0 +1,87 @@
+# إعادة توليد نسخة جديدة مع روابط فيديو يوتيوب لكل تمرين
+
+# روابط فيديوهات شروحات التمارين
+exercise_videos = {
+    "Scapula Hang": "https://www.youtube.com/watch?v=3YvfRx31xDE",
+    "Bodyweight Rows": "https://www.youtube.com/watch?v=IVd8Y67kKiQ",
+    "Negative Pull-ups": "https://www.youtube.com/watch?v=R9y6Vcqo5fE",
+    "Forearm Plank": "https://www.youtube.com/watch?v=pSHjTRCQxIw",
+    "Knee Push-ups": "https://www.youtube.com/watch?v=QkCJ6tHgfzQ",
+    "Plank to Push-up": "https://www.youtube.com/watch?v=J0DnG1_S92I",
+    "Chair Dips": "https://www.youtube.com/watch?v=0326dy_-CzM",
+    "Side Plank": "https://www.youtube.com/watch?v=K2VljzCC16g",
+    "Bodyweight Squats": "https://www.youtube.com/watch?v=aclHkVaku9U",
+    "Forward Lunges": "https://www.youtube.com/watch?v=QOVaHwm-Q6U",
+    "Glute Bridge": "https://www.youtube.com/watch?v=m2Zx-57cSok",
+    "Slow Burpees": "https://www.youtube.com/watch?v=UwRLWMcOdwI",
+    "Squat + Push-up": "https://www.youtube.com/watch?v=V5TZcKpGKLs",
+    "Plank with Leg Lift": "https://www.youtube.com/watch?v=z6PJMT2y8GQ",
+    "Core Crunches": "https://www.youtube.com/watch?v=Xyd_fa5zoEU"
+}
+
+# بناء النص مع الروابط
+html_content_with_links = """
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>خطة تمارين كاليثنكس للمبتدئين - 12 أسبوع بروابط فيديو</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+        h1, h2 { color: #2c3e50; }
+        .week { background: #ffffff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        ul { line-height: 1.8; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>خطة تمارين كاليثنكس للمبتدئين</h1>
+    <h2>مدة الخطة: 12 أسبوع | عدد الأيام بالأسبوع: 4 أيام</h2>
+    <p>جميع التمارين بوزن الجسم فقط، مع روابط لفيديوهات شرح كل تمرين.</p>
+"""
+
+for week in range(1, 13):
+    html_content_with_links += f"""
+    <div class="week">
+        <h2>الأسبوع {week}</h2>
+        <h3>اليوم 1: سحب (Pull Day)</h3>
+        <ul>
+            <li><a href="{exercise_videos['Scapula Hang']}" target="_blank">سكابولا باق هولد (Scapula Hang)</a> - 3 × 20 ثانية</li>
+            <li><a href="{exercise_videos['Bodyweight Rows']}" target="_blank">صف جسم أفقي (Bodyweight Rows)</a> - 3 × 8-10 تكرارات</li>
+            <li><a href="{exercise_videos['Negative Pull-ups']}" target="_blank">نيغاتيف بول أب (Negative Pull-ups)</a> - 3 × 5 تكرارات</li>
+            <li><a href="{exercise_videos['Forearm Plank']}" target="_blank">بلانك على الساعدين (Forearm Plank)</a> - 3 × 30 ثانية</li>
+        </ul>
+        <h3>اليوم 2: دفع (Push Day)</h3>
+        <ul>
+            <li><a href="{exercise_videos['Knee Push-ups']}" target="_blank">بوش أب على الركب (Knee Push-ups)</a> أو عادي - 3 × 10-12 تكرار</li>
+            <li><a href="{exercise_videos['Plank to Push-up']}" target="_blank">بلانك تو بوش أب (Plank to Push-up)</a> - 3 × 8 تكرارات</li>
+            <li><a href="{exercise_videos['Chair Dips']}" target="_blank">تمرين غطس على الكرسي (Chair Dips)</a> - 3 × 10 تكرارات</li>
+            <li><a href="{exercise_videos['Side Plank']}" target="_blank">بلانك جانبي (Side Plank)</a> - 2 × 20 ثانية لكل جانب</li>
+        </ul>
+        <h3>اليوم 3: الأرجل (Legs Day)</h3>
+        <ul>
+            <li><a href="{exercise_videos['Bodyweight Squats']}" target="_blank">سكوات وزن الجسم (Bodyweight Squats)</a> - 3 × 15 تكرار</li>
+            <li><a href="{exercise_videos['Forward Lunges']}" target="_blank">لونجز أمامية (Forward Lunges)</a> - 3 × 10 لكل رجل</li>
+            <li><a href="{exercise_videos['Glute Bridge']}" target="_blank">جلوت بريدج (Glute Bridge)</a> - 3 × 15 تكرار</li>
+            <li><a href="{exercise_videos['Forearm Plank']}" target="_blank">بلانك - 2 × 30 ثانية</a></li>
+        </ul>
+        <h3>اليوم 4: الجسم كامل (Full Body)</h3>
+        <ul>
+            <li><a href="{exercise_videos['Slow Burpees']}" target="_blank">بربيز ببطء (Slow Burpees)</a> - 3 × 8 تكرارات</li>
+            <li><a href="{exercise_videos['Squat + Push-up']}" target="_blank">سكوات + بوش أب (Squat + Push-up)</a> - 3 × 10 تكرار</li>
+            <li><a href="{exercise_videos['Plank with Leg Lift']}" target="_blank">بلانك مع رفع الرجل (Plank with Leg Lift)</a> - 3 × 10 لكل رجل</li>
+            <li><a href="{exercise_videos['Core Crunches']}" target="_blank">كور كرنش (Core Crunches)</a> - 3 × 15 تكرار</li>
+        </ul>
+    </div>
+    """
+
+html_content_with_links += """
+</body>
+</html>
+"""
+
+# حفظ الملف الجديد
+file_path_links = Path("/mnt/data/calisthenics_plan_12weeks_with_links.html")
+file_path_links.write_text(html_content_with_links, encoding="utf-8")
+file_path_links
